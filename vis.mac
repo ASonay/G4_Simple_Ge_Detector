@@ -1,0 +1,30 @@
+/control/verbose 2
+/run/verbose 2
+
+/run/initialize
+
+/Ge/RecMsg/FileName root_files/vis.root
+
+/vis/open OGL
+/vis/drawVolume
+/vis/scene/add/axes 0 0 0 300 mm
+/vis/drawView  70 -90 0. 0. cm 0.9
+/vis/scene/endOfEventAction accumulate
+
+/vis/viewer/set/hiddenMarker
+/vis/viewer/set/background .7 .8 .99 0.
+
+/vis/viewer/set/autoRefresh true
+/vis/verbose warnings
+
+/control/execute vis_draw_by_particle.mac
+
+/gps/pos/type Plane
+/gps/pos/shape Circle
+/gps/pos/radius 3 cm
+/gps/pos/centre 0 0 10.0 cm
+/gps/particle neutron
+
+/gps/direction 0 0 -1
+
+/gps/energy 1 eV

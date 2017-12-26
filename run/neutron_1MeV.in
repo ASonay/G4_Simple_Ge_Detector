@@ -1,0 +1,15 @@
+/Ge/RecMsg/FileName root_files/neutron_1MeV.root
+
+/run/initialize
+/gps/pos/type Plane
+/gps/pos/shape Circle
+/gps/pos/radius 3 cm
+/gps/pos/centre 0 0 20.0 cm
+
+
+/gps/particle neutron
+/gps/ene/mono 1.0 MeV
+/gps/direction 0 0 -1
+
+
+/run/beamOn 1000000

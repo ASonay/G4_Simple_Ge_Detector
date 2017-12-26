@@ -1,0 +1,19 @@
+# $Id$
+# 									
+# Decays of Th232 in analog MC mode   
+#
+#                                                                         
+/Ge/RecMsg/FileName root_files/Ge68.root
+/control/verbose 2
+/run/verbose 1
+#
+/run/initialize
+#
+/process/list
+#
+# place the isotopes in the middle of the target, at rest. 
+/gps/pos/centre 0 0 3.0 cm
+/gps/particle ion
+/gps/ion 32 68
+
+/run/beamOn 100000
